@@ -30,7 +30,7 @@
     color: var(--color-text)
 }
 
-.fa-code {
+.code-icon .fa-code {
     font-size: 2rem;
     display: inline-block;
     line-height: 1.5;
