@@ -1,109 +1,478 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Greg Perry">
-    <link rel="stylesheet" href="/css/theme.css">
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/pages.css">
-    <script src="https://kit.fontawesome.com/d39bd552a9.js" crossorigin="anonymous"></script>
-    <title>folio</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+	<link rel="stylesheet" href="./css/theme.css">
+	<link rel="stylesheet" href="./css/base.css">
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/pages.css">
+	<title>folio DEMO</title>
 </head>
 <body>
-    <div class="theme-panel">
-        <div class="theme-body">
-            <span>Change Theme</span>
-            <div class="btn-group">
-                <button>Light</button>
-                <button>Dark</button>
-            </div>
-            <button>
-                <i class="fas fa-chevron-left"></i>
-            </button>
-        </div>
-    </div>
+	<div class="theme-panel">
+		<div class="theme-body">
+			<span class="text">Change Theme</span>
+			<label class="theme-switch" for="checkbox">
+				<div class="btn-group">
+					<button id="light" class="switcher-btn active" data-toggle="light">Light</button>
+					<button id="dark" class="switcher-btn" data-toggle="dark">Dark</button>
+				</div>
+			</label>
+			<button class="theme-tab">
+				<i class="fas fa-chevron-left"></i>
+			</button>
+		</div>
+	</div>
+	<main class="site-wrapper">
+		<!-- Header -->
+		<header class="site-header">
+			<nav class="navbar">
+				<div class="brand-logo">
+					<a href="index.html"><h2>folio.</h2></a>
+				</div>
+				<div class="navbar-nav">
+					<ul class="ul-defaults-none main-menu">
+						<li class="nav-item">Home</li>
+						<li class="nav-item" data-open="about">About Me</li>
+						<li class="nav-item" data-open="contact">Contact</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
 
-    <main class="site-wrapper">
-        <header class="site-header">
-            <nav class="navbar">
-                <div class="brand-logo">
-                    <a href="/"><h2>folio.</h2></a>
-                </div>
-                <div class="navbar-nav">
-                    <ul class="ul-defaults-none main-menu">
-                        <li class="nav-item">Home</li>
-                        <li class="nav-item" data-open="about">About Me</li>
-                        <li class="nav-item" data-open="contact">Contact</li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+		<!-- Hero Section -->
+		<section class="hero-bg">
+			<div class="container">
+				<div class="hero-content">
+					<span class="code-icon">
+						<i class="fas fa-code"></i>
+					</span>
+					<div class="hero-message">
+						<h2 class="header-lg">Code. Eat. Sleep.</h2>
+						<div class="sub-header">I create meaningful solutions for your brands and products.
+							<br/>
+							Give your customers the best experience possible.</div>
+					</div>
+					<div class="btn btn-primary rounded-pill hero-cta">
+						<a href="#" data-open="contact">Let's talk now</a>
+					</div>
+				</div>
+			</div>
+		</section>
 
-        <!-- Hero section -->
-        <section class="hero-bg">
-            <div class="container">
-                <div class="heao-content">
-                    <div class="code-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h2 class="header-lg">Code. Eat. Sleep</h2>
-                    <div class="sub-header">
-                        I create meaningful solutions for your brand and products.<br>
-                        Give your customers the best experience possible.
-                    </div>
-                    <div class="btn btn-primary .round-pill">
-                        <a href="#" data-open="contact">Let's talk now</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+		<!-- Portfolio Section -->
+		<section class="portfolio-section">
+			<div class="container">
+				<div class="search-container">
+					<label for="search">
+						<input autocomplete="off" id="search" type="text" class="search-input" placeholder="Search...">
+						<i class="fas fa-search"></i>
+				</label>
+				</div>
+				<ul class="portfolio-filter-nav ul-defaults-none">
+					<li class="filter-link active" data-filter="all">All Work</li>
+					<li class="filter-link" data-filter="web">Web Development</li>
+					<li class="filter-link" data-filter="apps">App Development</li>
+					<li class="filter-link" data-filter="ui">UI Design</li>
+				</ul>
+			</div>
+				<div class="container-fluid">
+					<div id="portfolio" class="portfolio-grid">
+						
+						<div id="web" class="portfolio-card" data-item="web" data-open="web-1">
+							<div class="card-body">
+								<img src="./assets/images/portfolio-1.jpg" alt="portfolio item">
+								<div class="card-popup-box">
+									<div>Web Development</div>
+									<h3>Travel Website</h3>
+								</div>
+							</div>
+						</div>
 
-    <!-- Modals -->
-    <!-- About Page Modal -->
-    <div id="about" class="full-site-modal page-block is-visable" data-animation="zoomInOut">
-        <header class="modal-header">
-            <h3>ABOUT PAGE</h3>
-            <i class="fas fa-times" data-close></i>
-        </header>
-        <div class="modal-body">
-            <div class="img-wrapper">
-                <img src="/assets/images/img4.jpg" alt="head shot">
-            </div>
-            <h2>Greg Perry</h2>
-            <p>text 1</p>
-            <p>text 2</p>
-            <div>
-                <div>Email Me:</div>
-                <a href="mailto:chizy2@gmail.com">chizy2@gmail.com</a>
-            </div>
-        </div>
-    </div>
+						<div id="web"  class="portfolio-card" data-item="web" data-open="web-2">
+							<div class="card-body">
+								<img src="./assets/images/portfolio-2.jpg" alt="portfolio item">
+								<a href="#" class="card-popup-box">
+									<div>Web Development</div>
+									<h3>Food Website</h3>
+								</a>
+							</div>
+						</div>
 
-    <!-- Contact Page Modal -->
-    <div id="contact" class="full-site-modal page-block is-visable" data-animation="zoomInOut">
-        <header class="modal-header">
-            <h3>Contact PAGE</h3>
-            <i class="fas fa-times" data-close></i>
-        </header>
-        <div class="modal-body">
-            <div class="img-wrapper">
-                <img src="/assets/images/img4.jpg" alt="head shot">
-            </div>
-            <h2>Greg Perry</h2>
-            <p>text 1</p>
-            <p>text 2</p>
-            <div>
-                <div>Email Me:</div>
-                <a href="mailto:chizy2@gmail.com">chizy2@gmail.com</a>
-            </div>
-        </div>
-    </div>
-    
-   
-    <script src="/js/main.js"></script>
+						<div id="apps" class="portfolio-card" data-item="apps" data-open="app-1">
+							<div class="card-body">
+								<img src="./assets/images/portfolio-3.jpg" alt="portfolio item">
+								<a href="#" class="card-popup-box">
+									<div>App Development</div>
+									<h3>Travel App</h3>
+								</a>
+							</div>
+						</div>
+
+						<div id="apps" class="portfolio-card" data-item="apps" data-open="app-2">
+							<div class="card-body">
+								<img src="/assets/images/portfolio-4.jpg" alt="portfolio item">
+								<a href="#" class="card-popup-box">
+									<div>App Development</div>
+									<h3>Food App</h3>
+								</a>
+							</div>
+						</div>
+
+						<div id="web" class="portfolio-card" data-item="web" data-open="web-3">
+							<div class="card-body">
+								<img src="./assets/images/portfolio-5.jpg" alt="portfolio item">
+								<a href="#" class="card-popup-box">
+									<div>Web Development</div>
+									<h3>Skate Website</h3>
+								</a>
+							</div>
+						</div>
+
+						<div id="ui"  class="portfolio-card" data-item="ui" data-open="ui-1">
+							<div class="card-body">
+								<img src="./assets/images/portfolio-6.jpg" alt="portfolio item">
+								<a href="#" class="card-popup-box">
+									<div>UI Design</div>
+									<h3>Video Game</h3>
+								</a>
+							</div>
+						</div>
+
+						<div id="ui" class="portfolio-card" data-item="ui" data-open="ui-2">
+							<div class="card-body">
+								<img src="./assets/images/portfolio-7.jpg" alt="portfolio item">
+								<a href="#" class="card-popup-box">
+									<div>UI Design</div>
+									<h3>Marketing</h3>
+								</a>
+							</div>
+						</div>
+
+						<div id="apps" class="portfolio-card" data-item="apps" data-open="app-3">
+							<div class="card-body">
+								<img src="./assets/images/portfolio-8.jpg" alt="portfolio item">
+								<a href="#" class="card-popup-box">
+									<div>App Development</div>
+									<h3>Game App</h3>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+
+		<!-- Reviews Section -->
+		<section class="reviews">
+			<div class="review-title">What People Say</div>
+			<h2 class="header-md">Trusted by Clients.</h2>
+			<div class="review-preview">
+				<img src="./assets/images/cube.png" alt="cube">
+			</div>
+			<div class="review-container">
+				<div class="review-carousel">
+
+					<div class="review-item">
+						<div class="review-text">
+							“#1 Folio Designer is a clean and creative landing page that matches with any freelancer or designer, you can easily to build the page in Sketch or Figma.”
+						</div>
+						<div class="review-author">
+							<div class="avatar">
+								<img class="boomer" src="./assets/images/ava-1.jpg" alt="avatar">
+							</div>
+							<div class="details">
+								<div class="h5">Dash</div>
+								<div class="company">UI8</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="review-item">
+						<div class="review-text">
+							“#2 Folio Designer is a clean and creative landing page that matches with any freelancer or designer, you can easily to build the page in Sketch or Figma.”
+						</div>
+						<div class="review-author">
+							<div class="avatar">
+								<img class="boomer" src="./assets/images/ava-1.jpg" alt="avatar">
+							</div>
+							<div class="details">
+								<div class="h5">Dash</div>
+								<div class="company">UI8</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="review-item">
+						<div class="review-text">
+							“#3 Folio Designer is a clean and creative landing page that matches with any freelancer or designer, you can easily to build the page in Sketch or Figma.”
+						</div>
+						<div class="review-author">
+							<div class="avatar">
+								<img class="boomer" src="./assets/images/ava-1.jpg" alt="avatar">
+							</div>
+							<div class="details">
+								<div class="h5">Dash</div>
+								<div class="company">UI8</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="review-item">
+						<div class="review-text">
+							“#4 Folio Designer is a clean and creative landing page that matches with any freelancer or designer, you can easily to build the page in Sketch or Figma.”
+						</div>
+						<div class="review-author">
+							<div class="avatar">
+								<img src="./assets/images/ava-1.jpg" alt="avatar">
+							</div>
+							<div class="details">
+								<div class="h5">Dash</div>
+								<div class="company">UI8</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="slide-ctrl-container flex-j-center">
+					<button class="slide-ctrl">
+						<i class="fas fa-arrow-left"></i>
+					</button>
+					<button class="slide-ctrl">
+						<i class="fas fa-arrow-right"></i>
+					</button>
+				</div>
+			</div>
+		</section>
+	
+		<!-- ** MODALS ** -->
+		<!-- About Page Modal -->
+		<div class="full-site-modal page-block" id="about" data-animation="zoomInOut">
+			<div class="container-fluid about">
+				<header class="modal-header">
+					<h3>ABOUT PAGE</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="about-img">
+						<img src="./assets/images/4.jpg" alt="head shot">
+					</div>
+					<div class="about-text">
+						<h2 class="header-md">Gregory Perry</h2>
+						<p>Full Stack Developer based in Mississippi, USA. Nobody can see how elegant my code is...so I snapshot it, frame it, and hang it on my wall.</p>
+						<p>I write code like I diet - lean. jk. It's more like Taco Bell Beefy 5 Layer Burritos...which is still leaner than some other foods.</p>
+						<div class="contact-me-block">
+							<div>Email Me:</div>
+							<a href="mailto:chizy2@gmail.com">chizy2@gmail.com</a>
+						</div>
+					</div>
+				</div>
+				<div class="marquee">
+					<ul class="marquee-content">
+						<li><i class="fab fa-github"></i></li>
+						<li><i class="fab fa-codepen"></i></li>
+						<li><i class="fab fa-dev"></i></li>
+						<li><i class="fab fa-react"></i></li>
+						<li><i class="fab fa-vuejs"></i></li>
+						<li><i class="fab fa-angular"></i></li>
+						<li><i class="fab fa-node"></i></li>
+						<li><i class="fab fa-aws"></i></li>
+						<li><i class="fab fa-docker"></i></li>
+						<li><i class="fab fa-android"></i></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Contact Page Modal -->
+		<div class="full-site-modal page-block" id="contact" data-animation="zoomInOut">
+			<div class="container-fluid contact">
+				<header class="modal-header">
+					<h3>CONTACT PAGE</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="contact-text">
+						<h2 class="header-md">Greg Perry</h2>
+						<div class="">Have a project or question? Send me a message</div>
+						<div class="">I will reply within 48 hours.</div>
+					</div>
+					<form class="folio-form">
+						<input name="name" class="form-control" type="text" placeholder="Name">
+						<input name="email" class="form-control" type="email" placeholder="Email">
+						<input name="subject"class="form-control" type="text" placeholder="Subject">
+						<textarea class="form-control" name="message" cols="30" rows="3" placeholder="Write your message"></textarea>
+						<input type="submit" value="send" class="btn btn-primary rounded-pill hero-cta">
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Web 1 -->
+		<div class="modal" id="web-1" data-animation="slideInOutTop">
+			<div class="modal-dialog">
+				<header class="modal-header">
+					<h3>Web Project 1</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="img-wrapper">
+						<img src="./assets/images/portfolio-1.jpg" alt="portfolio item">
+					</div>
+					<div class="text-wrapper">
+						<p><strong>My first awesome website</strong></p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellendus reprehenderit accusamus totam ratione!</p>
+						<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Web 2 -->
+		<div class="modal" id="web-2" data-animation="slideInOutTop">
+			<div class="modal-dialog">
+				<header class="modal-header">
+					<h3>Web Project 2</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="img-wrapper">
+						<img src="./assets/images/portfolio-2.jpg" alt="portfolio item">
+					</div>
+					<div class="text-wrapper">
+						<p><strong>My Second awesome website</strong></p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellendus reprehenderit accusamus totam ratione!</p>
+						<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- App 1 -->
+		<div class="modal" id="app-1" data-animation="slideInOutTop">
+			<div class="modal-dialog">
+				<header class="modal-header">
+					<h3>App Project 1</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="img-wrapper">
+						<img src="./assets/images/portfolio-3.jpg" alt="portfolio item">
+					</div>
+					<div class="text-wrapper">
+						<p><strong>My First awesome app</strong></p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellendus reprehenderit accusamus totam ratione!</p>
+						<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- App 2 -->
+		<div class="modal" id="app-2" data-animation="slideInOutTop">
+			<div class="modal-dialog">
+				<header class="modal-header">
+					<h3>App Project 2</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="img-wrapper">
+						<img src="./assets/images/portfolio-4.jpg" alt="portfolio item">
+					</div>
+					<div class="text-wrapper">
+						<p><strong>My Second awesome app</strong></p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellendus reprehenderit accusamus totam ratione!</p>
+						<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Web 3 -->
+		<div class="modal" id="web-3" data-animation="slideInOutTop">
+			<div class="modal-dialog">
+				<header class="modal-header">
+					<h3>Web Project 3</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="img-wrapper">
+						<img src="./assets/images/portfolio-5.jpg" alt="portfolio item">
+					</div>
+					<div class="text-wrapper">
+						<p><strong>My Third awesome website</strong></p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellendus reprehenderit accusamus totam ratione!</p>
+						<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- UI 1 -->
+		<div class="modal" id="ui-1" data-animation="slideInOutTop">
+			<div class="modal-dialog">
+				<header class="modal-header">
+					<h3>UI Project 1</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="img-wrapper">
+						<img src="./assets/images/portfolio-6.jpg" alt="portfolio item">
+					</div>
+					<div class="text-wrapper">
+						<p><strong>My First awesome UI</strong></p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellendus reprehenderit accusamus totam ratione!</p>
+						<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<!-- UI 2 -->
+		<div class="modal" id="ui-2" data-animation="slideInOutTop">
+			<div class="modal-dialog">
+				<header class="modal-header">
+					<h3>UI Project 2</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="img-wrapper">
+						<img src="./assets/images/portfolio-7.jpg" alt="portfolio item">
+					</div>
+					<div class="text-wrapper">
+						<p><strong>My Second awesome UI</strong></p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellendus reprehenderit accusamus totam ratione!</p>
+						<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- App 3 -->
+		<div class="modal" id="app-3" data-animation="slideInOutTop">
+			<div class="modal-dialog">
+				<header class="modal-header">
+					<h3>App Project 3</h3>
+					<i class="fas fa-times" aria-label="close modal" data-close></i>
+				</header>
+				<div class="modal-body">
+					<div class="img-wrapper">
+						<img src="./assets/images/portfolio-8.jpg" alt="portfolio item">
+					</div>
+					<div class="text-wrapper">
+						<p><strong>My Third awesome App</strong></p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellendus reprehenderit accusamus totam ratione!</p>
+						<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script src="../js/main.js"></script>
+	<!-- <script src="../js/theme.js"></script> -->
+
 </body>
 </html>
