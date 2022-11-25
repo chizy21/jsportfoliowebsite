@@ -304,8 +304,8 @@
 }
 
 .review-carousel .review-item {
-  position: absolute;
-  transition: all 300ms ease-in-out;
+	position: absolute;
+	transition: all 300ms ease-in-out;
 	padding: 2.5rem;
 	border-radius: 24px;
 	background: var(--bg-panel);
@@ -353,15 +353,15 @@
 }
 
 .review-item.active {
-  opacity: 1;
-  z-index: 10;
+	opacity: 1;
+	z-index: 10;
 	transform: translate(0, -10%);
 }
 
 .review-item.prev,
 .review-item.next {
-  z-index: 2;
-  opacity: 0.25;
+	z-index: 2;
+	opacity: 0.25;
 }
 
 .review-item.prev { transform: translateX(-75%); }
@@ -371,14 +371,14 @@
 	margin-top: 50px
 }
 .slide-ctrl {
-  font-size: 32px;
-  cursor: pointer;
+	font-size: 32px;
+	cursor: pointer;
 	transition: all 300ms ease-in-out;
 	opacity: 0.75;
 }
 
 .slide-ctrl:hover {
-  opacity: 1;
+	opacity: 1;
 }
 
 button.slide-ctrl {
@@ -389,33 +389,33 @@ button.slide-ctrl {
 }
 
 .slide-ctrl:nth-child(1) {
-  padding-right: 10px;
+	padding-right: 10px;
 }
 
 .slide-ctrl:nth-child(2) {
-  padding-left: 10px;
+	padding-left: 10px;
 }
 
 /* MODAL */
 .modal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.8);
 	cursor: pointer; /* Added for off click */
 	opacity: 0; /* starts hidden */
 } 
 
 .modal,
 .full-site-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 1rem;
-  visibility: hidden;
-  opacity: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 1rem;
+	visibility: hidden;
+	opacity: 0;
 	transition: all 0.35s ease-in;
 	overflow: auto;
 }
@@ -440,18 +440,18 @@ button.slide-ctrl {
 
 .full-site-modal.is-visible,
 .modal.is-visible {
-  visibility: visible;
-  opacity: 1;
+	visibility: visible;
+	opacity: 1;
 }
 
 .modal-dialog {
-  position: relative;
-  max-width: 800px;
-  max-height: 80vh;
-  border-radius: 5px;
+	position: relative;
+	max-width: 800px;
+	max-height: 80vh;
+	border-radius: 5px;
 	background: var(--bg-panel);
 	color: var(--color-text-base);
-  overflow: auto;
+	overflow: auto;
 	cursor: default;
 	padding: 1.25rem 1.85rem;
 }
@@ -475,13 +475,13 @@ button.slide-ctrl {
 
 
 [data-animation] .modal-dialog {
-  opacity: 0;
-  transition: all 0.5s;
+	opacity: 0;
+	transition: all 0.5s;
 }
 
 [data-animation].is-visible .modal-dialog {
-  opacity: 1;
-  transition-delay: 0.2s;
+	opacity: 1;
+	transition-delay: 0.2s;
 }
 
 [data-animation="slideInOutTop"] .modal-dialog {
@@ -489,10 +489,10 @@ button.slide-ctrl {
 }
 
 [data-animation="zoomInOut"].full-site-modal {
-  transform: scale(0.2);
+	transform: scale(0.2);
 }
 
 [data-animation="slideInOutTop"].is-visible .modal-dialog,
 [data-animation="zoomInOut"].full-site-modal.is-visible {
-  transform: none;
+	transform: none;
 }
